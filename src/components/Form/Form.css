@@ -113,3 +113,29 @@ input:hover, textarea:hover  {
         padding: 32px;
     }
 }
+
+@media (max-width: 768px) {
+    .form-wrapper {
+        margin: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-contact__block {
+        padding: 20px 16px;
+    }
+    .form-left__block {
+        padding: 24px 16px;
+    }
+    .form-fields__list {
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+    textarea {
+        min-height: 130px;
+        margin-bottom: 16px;
+    }
+    .btn-form__send {
+        width: 100%;
+    }
+}

@@ -45,6 +45,7 @@ body {
     color: #FFFFFF;
     background-color: #04060A;
     font-family: "Inter";
+    overflow-x: hidden;
 }
 
 .gs-text {
@@ -245,9 +246,15 @@ body {
     margin-left: auto;
     padding-right: var(--bs-gutter-x,0.75rem);
     padding-left: var(--bs-gutter-x,0.75rem);
+
 }
 
-
+@media (max-width: 768px) {
+    .custom__container {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+}
 
 .gs-lnk {
     color: #FFBC00;
