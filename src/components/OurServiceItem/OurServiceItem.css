@@ -52,12 +52,15 @@
 }
 
 @media (max-width: 768px) {
-    .service-item {
+    .service-item,
+    .tires-box {
         height: auto;
-        min-height: 200px;
-        gap: 16px;
         margin-left: 0;
         margin-right: 0;
+    }
+    .service-item {
+        min-height: 200px;
+        gap: 16px;
     }
 }
 
