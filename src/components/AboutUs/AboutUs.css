@@ -89,6 +89,10 @@
     .about-background__img {
         display: none;
     }
+    .about-wrapper {
+        margin-top: 88px;
+        margin-bottom: 88px;
+    }
 }
 
 /* .about-background__img {
