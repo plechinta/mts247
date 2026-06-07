@@ -2,12 +2,13 @@
     border: 1px solid rgba(255, 255, 255, 0.33);
     border-radius: 12px;
     background: #ffbc00;
-    padding: 16px 24px;
+    padding: 14px 0 14px 20px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 12px;
+    gap: 8px;
+    min-height: 83px;
 }
 
 .tires-box__text {
@@ -15,9 +16,28 @@
     min-width: 0;
 }
 
+.tires-box__title {
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 22px;
+    color: #000;
+    text-transform: uppercase;
+    margin: 0 0 2px 0;
+}
+
+.tires-box__desc {
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    opacity: 0.75;
+    margin: 0;
+}
+
 .tire_box__img {
-    height: 90px;
+    height: 100px;
     width: auto;
     flex-shrink: 0;
-    margin-right: -24px;
+    display: block;
 }

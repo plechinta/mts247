@@ -7,9 +7,8 @@ function BuyTires({title}) {
                 <div className="mb-4">
                     <div className="tires-box">
                         <div className="tires-box__text">
-                            <span className="gs-text__h5" style={{color: "#000"}}>Buy tires from us!</span>
-                            <br />
-                            <span className="gs-text" style={{color: "#000"}}>Lorem ipsum lorem ipsum</span>
+                            <p className="tires-box__title">Buy tires from us!</p>
+                            <p className="tires-box__desc">Lorem ipsum lorem ipsum</p>
                         </div>
                         <img src={tire_photo} className="tire_box__img" alt="" />
                     </div>
