@@ -40,12 +40,24 @@
     border: 1px solid rgba(255, 255, 255, 0.33);
 }
 
+.service-item > svg {
+    flex-shrink: 0;
+}
+
 @media(max-width: 992px) {
     .service-item, .tires-box{
         margin-left: 24px;
         margin-right: 24px;
-        /* height: 314px;
-        width: 363px; */
+    }
+}
+
+@media (max-width: 768px) {
+    .service-item {
+        height: auto;
+        min-height: 200px;
+        gap: 16px;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
