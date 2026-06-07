@@ -1,0 +1,94 @@
+.our-service__title { 
+    line-height: 68px;
+}
+
+.our-service__title {
+    margin-bottom: 8px;
+}
+
+/* .our-service__text {
+    margin-bottom: 38px;
+} */
+
+.service__pagination-lg, .service__pagination-sm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    max-height: 51px;
+
+}
+
+.our-service-slide {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,272px);
+    gap: 24px;
+}
+/* .service__pagination-lg:hover, .service__pagination-sm:hover {
+    
+} */
+
+.service__pagination-sm.is-active{
+    background: #FFBC00; /* или как у тебя */
+    color: #000;
+}
+.service__pagination-lg {
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000;
+    
+    background: #ffbc00;
+    border: 1px solid #79530b;
+    border-radius: 10px;
+
+    padding: 16px 14px ;
+
+}
+
+.service__pagination-sm {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+    line-height: 23px;
+    
+    background: #ffbc00;
+    border: 1px solid #79530b;
+    border-radius: 10px;
+    padding: 17px 20px;
+
+}
+
+.service__pagination-block {
+    /* Нижний отступ задан тут  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 16px;
+    /* margin-top: 40px; */
+    /* margin-bottom: 88px; */  
+}
+
+
+.tires-box {
+    border: 1px solid rgba(255, 255, 255, 0.33);
+    border-radius: 12px;
+    background: #ffbc00;
+    padding: 16px 24px 16px 24px;
+    position: relative;
+}
+
+
+.service__pagination-sm.is-active {
+    border-color: #79530b;  
+    background-color: #1C150A; /* Темный фон для активной страницы */
+    color: #FFBC00;         /* Желтый цвет цифры */
+}
+.services-wrapper .splide {
+    padding: 0;
+}

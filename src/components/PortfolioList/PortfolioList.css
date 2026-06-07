@@ -1,0 +1,29 @@
+.portfolio__txt {
+    font-family: "Inter", sans-serif; /* Лучше всегда добавлять фоллбек sans-serif */
+    font-weight: 600;
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    /* Добавил filter в transition, чтобы блюр тоже появлялся плавно */
+    transition: opacity 0.3s ease, filter 0.3s ease; 
+}
+
+.portfolio__txt-container {
+    width: 100%;
+    height: 360px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;  
+    cursor: pointer; /* Курсор меняется на "руку" при наведении */
+}
+
+/* При наведении текст исчезает и размывается — классная фича! */
+.portfolio__txt-container:hover .portfolio__txt {
+    opacity: 0;
+    filter: blur(4px);
+}

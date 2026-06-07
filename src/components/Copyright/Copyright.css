@@ -1,0 +1,54 @@
+    /* font-family: "Inter" ;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffbc00; */
+
+/* .copyright-wrapper { 
+    background-color: #04060A;
+    min-height: 50px;
+}
+
+
+.content-wrapper {
+    display: flex;
+    gap: 428px;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+
+.copyright-wrapper {
+    background-color: #04060A;
+    padding: 12px 0;
+    font-family: "Inter" ;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffbc00;
+    line-height: 18px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.links {
+    display: flex;
+    gap: 16px;
+}
+
+
+@media (max-width: 576px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+    .links {
+        flex-direction: column;
+    }
+}

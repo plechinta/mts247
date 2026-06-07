@@ -1,0 +1,133 @@
+.whoarewe__wrapper {
+    margin-top: 88px;
+}
+
+.whoarewe__txt-block{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.whoarewe__txt {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    text-align: justify;
+    line-height: 22px;
+}
+
+.whoarewe__title { 
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #ffbc00;
+}
+
+.whoarewe__desc {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.whoarewe__hr {
+    border: 1px solid rgb(255, 187, 0);
+}
+
+.whoweare__img {
+    width: 100%;
+    height: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.33);
+    border-radius: 24px;
+}
+
+.whoweare__icon-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.whoweare__charts {
+    display: flex   ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-top: 40px; */
+    gap: 2px;
+    padding: 16px 88px 16px 88px;
+    background: #0f1115;
+    border: 1px solid rgba(255, 255, 255, 0.33);
+    border-radius: 24px;
+}
+
+
+.whoweare__charts-title {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffbc00;
+}
+
+.whoweare__charts-desc {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: capitalize;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.whoarewe__spacing {
+    margin-top: 44px;
+}
+
+
+@media (max-width: 768px) {
+    .whoweare__charts {
+        background: #ffbc00;
+        border: 1px solid rgba(255, 255, 255, 0.33);
+    }
+    .whoweare__charts-desc {
+        color: #000;
+    }
+    .whoweare__charts-title {
+        color: #000;
+    }
+    .whoweare__icon-block {
+        flex-direction: column;
+        align-items: start;
+    }
+    .whoarewe-icon {
+        width: 80px;
+        height: auto;
+    }
+    .whoarewe__txt {
+        background-color: #0F1115;
+        padding: 24px 16px;
+        border-radius: 32px;
+    }
+    .whoarewe__txt-block .whoarewe__txt:first-child {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-image:
+        url("../../assets/Image/weare_dr.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 32px 20px;
+        border-radius: 24px;
+        height: 618px;
+    }
+
+
+}

@@ -1,0 +1,40 @@
+import Header from "../../components/Header/Header.jsx"
+import Main from "../../components/Main/Main.jsx"
+import NeedOurService from "../../components/NeedOurService/NeedOurService.jsx";
+import ServiceList from "../../components/ServiceList/ServiceList.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
+import Copyright from "../../components/Copyright/Copyright.jsx"
+import background from "../../assets/Image/background/service_bc.jpg"
+
+function Service({}) {
+    
+    const page = {
+                key: "block__main-content-center",
+                status: "HOME / SERVICES",
+                titleWhite:"Our",
+                titleYellow:" Services",
+                desc:"Serving all of Belgium. Fast response, professional equipment, and friendly service.",
+                pic: background, 
+                }
+
+    return(
+        <>
+            <Header />
+            <Main  page={page}/>
+            <section className="gs-section"> 
+                <NeedOurService />
+            </section>
+            <section className="gs-section">
+                <ServiceList />
+            </section>
+            <section className="gs-section">
+                <Footer />
+            </section>
+            <section >
+                <Copyright/>
+            </section>
+        </>
+    );
+}
+
+export default Service;

@@ -1,0 +1,299 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+
+@import "../../node_modules/tailwindcss/";
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 400;
+    font-style: normal;
+    src:
+        local("Inter"),
+        local("Inter-Regular"),
+        /* url("../assets/Fonts/Inter-Regular.woff2") format("woff2"), */
+        url("../assets/Fonts/Intert-Regular.woff") format("woff"),
+        url("../assets/Fonts/Inter-Regular.eot") format("eot");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 700;
+    font-style: normal;
+    src:
+        local("Inter"),
+        local("Inter-Bold"),
+        /* url("../assets/Fonts/Inter-Bold.woff2") format("woff2"), */
+        url("../assets/Fonts/Inter-Bold.woff") format("woff"),
+        url("../assets/Fonts/Inter-Bold.eot") format("eot");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    font-weight: 900;
+    font-style: normal;
+    src:
+        local("Inter"),
+        local("Inter-Black"),
+        /* url("../assets/Fonts/Inter-Black.woff2") format("woff2"), */
+        url("../assets/Fonts/Inter-Black.woff") format("woff"),
+        url("../assets/Fonts/Inter-Black.eot") format("eot");
+    font-display: swap;
+}
+
+body {
+    color: #FFFFFF;
+    background-color: #04060A;
+    font-family: "Inter";
+}
+
+.gs-text {
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+    opacity: 80%;
+    line-height: 22px;
+}   
+
+.gs-text__small{
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+    opacity: 80%;
+    text-transform: uppercase;
+}   
+
+.gs-text__h1{
+    font-family: 'Inter';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px;
+    text-transform: uppercase; 
+    
+}
+
+.gs-text__h2{
+    font-family: 'Inter';
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 64px; 
+    /* Что такое line height */
+    text-transform: uppercase; 
+}
+
+/* @media (max-width: 768px) {
+    .gs-text__h2 {
+        font-size: 36px;
+    }
+} */
+
+.gs-text__h3{
+    font-family: 'Inter';
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000000 ;
+}
+
+.gs-text__h4{
+    font-family: 'Inter';
+    font-size: 32px;
+    line-height: 29px;
+    font-weight: 900;
+    color: #FFBC00;
+}
+
+.gs-text__h5{
+    font-family: 'Inter';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 29px;
+    color: #FFBC00;
+    text-transform: uppercase;
+}
+
+
+/* .btn-form__send {
+    margin-top: 27px;
+    margin-bottom: 35px;
+} */
+
+.gs-btn {
+    --opacity: 1;
+    font-family: 'Inter';
+    font-weight: 900;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50px;
+    white-space: nowrap;
+
+    opacity: var(--opacity);
+    
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &:active {
+        opacity: 0.9;
+    }
+}
+
+.gs-btn__sr {
+    border-radius: 30px;
+    padding: 12px 26px 12px 26px;
+    background-color: #FFBC00;
+    color: #04060A;
+    text-transform: uppercase;
+
+
+}
+
+.gs-btn__by {
+    font-size: 18px;
+    padding: 24px 48px 24px 48px;   
+    background-color: #FFBC00;
+    color: #04060A;
+    text-transform: uppercase;
+}
+.gs-btn__sy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    padding: 6px 11px 6px 11px;
+    background-color: #2DB742;
+    color: #04060A;
+    text-transform: uppercase;
+    gap: 8px;
+    height: 33px;
+}
+
+.gs-btn__b {
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    font-size: 16px;
+    padding: 16px 48px 16px 48px;
+    background-color: #04060A;
+    color: #FFBC00;
+    text-transform: uppercase;
+    height: 51px;
+    width: 100%;
+}
+/* 
+.gs-btn__b {
+    display: inline-flex;
+    justify-content: center ;
+    align-items: center;
+    font-size: 16px;
+    padding: 16px 48px 16px 48px;
+    background-color: #04060A;
+    color: #FFBC00;
+    text-transform: uppercase;
+    height: 51px;
+} */
+
+.gs-btn__y { 
+    font-size:16px;
+    padding: 16px 48px 16px 48px;
+    background-color: #FFBC00;
+    color: #04060A;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 900;
+
+}
+
+.gs-btn__bs { 
+    display: flex;
+    flex-wrap: nowrap;
+    font-size:16px;
+    font-weight: 700;
+    padding: 12px 26px 12px 26px;
+    background-color: #04060A;
+    color: #FFFFFF;
+    border-radius: 50px;
+    line-height: 18px;
+    white-space: nowrap;
+}
+
+.gs-btn__sm {
+    background-color:  #1C150A;
+    border-radius: 7px;
+    border: 1px solid #79530b;
+    padding: 4px 6px 4px 6px;
+    color: #FFFFFF;
+    font-family: 'Inter';
+    line-height: 13px;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.custom__container { 
+    max-width: 1416px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: var(--bs-gutter-x,0.75rem);
+    padding-left: var(--bs-gutter-x,0.75rem);
+}
+
+
+
+.gs-lnk {
+    color: #FFBC00;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap;
+    /* letter-spacing: 0.7px; */
+}
+
+.gs-section + .gs-section { 
+    margin-top: 80px;
+}
+
+button svg,
+a svg {
+    flex-shrink: 0;
+}
+
+.gs-section + .gs-section {
+    margin-top: 88px ;
+}
+
+
+
+/* BG MENU */
+
+/* Этот код сработает, как только у body появится класс */
+body.menu-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 10; /* Главное, чтобы у самого бургер-меню z-index был 20+ */
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    pointer-events: none; /* Чтобы блюр не мешал кликать по самому меню */
+    animation: fadeIn 0.3s forwards;
+}
+
+/* Бонусом: запрещаем скролл страницы, пока меню открыто */
+body.menu-open {
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

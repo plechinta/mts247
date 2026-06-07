@@ -1,0 +1,9 @@
+.serviceItem {
+    margin-bottom: 40px;
+}
+.serviceItem:first-child {
+    margin-top: 88px;
+}
+.serviceItem:last-child {
+    margin-bottom: 88px
+} 

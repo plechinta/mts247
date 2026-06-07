@@ -1,0 +1,14 @@
+.tires-box {
+    border: 1px solid rgba(255, 255, 255, 0.33);
+    border-radius: 12px;
+    background: #ffbc00;
+    padding: 16px 24px 16px 24px;
+    position: relative;
+}
+
+.tire_box__img {
+    position: absolute;
+    right: 0px;
+    top: 7px; 
+}
+

@@ -1,0 +1,142 @@
+.footer { 
+    background-color: #FFBC00;
+    min-height: 378px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.footer-block__lft { 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    gap: 22px;
+
+}
+.footer-services {
+    display: flex;
+    flex-direction: row;
+    gap: 27px;
+}
+
+@media max {
+    
+}
+.footer-soc__block {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-icon { 
+    margin-right: 10px;
+}
+
+.footer-contact__block { 
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contact__icon {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+.footer-sub__text{ 
+    font-family: "Inter", sans-serif;
+    line-height: 18px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #000;
+}
+
+.footer-main__text {
+    font-family: "Inter", sans-serif;
+    line-height: 22px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+}
+
+.footer-contact__img {
+    margin-right: 16px;
+}
+
+.footer-title__txt {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: capitalize;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #000;
+}
+
+.footer-services__table {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 33px;
+}
+
+@media (max-width: 992px) {
+    .footer-services__table {
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+
+.footer-ff1 {
+    font-family: "Inter", sans-serif;
+    line-height: 29px;
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+}
+
+.footer-ff2 {
+    font-family: "Inter", sans-serif;
+    line-height: 22px;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #000;
+    white-space: nowrap;    
+
+}
+
+.footer-ff1__contact {
+    font-family: "Inter", sans-serif;
+    line-height: 18px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #000;
+}
+
+.footer-ff2__contact {
+    font-family: "Inter", sans-serif;
+    line-height: 22px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+}
+.footer__wrapper {
+    display: flex;
+    gap: clamp(24px, 22px, 127px);
+    margin-top: 88px;
+    margin-bottom: 88px;
+}   
+
+@media (max-width: 992px) {
+    .footer__wrapper{
+        margin-bottom: 32px; 
+    }
+}
+

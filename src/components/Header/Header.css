@@ -1,0 +1,85 @@
+/* Этот код заставляет скроллбар всегда присутствовать, чтобы ширина страницы не прыгала */
+body {
+    overflow-y: scroll;
+}
+
+/* А здесь мы скрываем скроллбар в Chrome/Safari, но оставляем функционал */
+::-webkit-scrollbar {
+    width: 0px; 
+    background: transparent;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 96px;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.header__nav-list {
+    display: flex; /* Выстраиваем меню в строку */
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav-link {
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    white-space: nowrap; /* Чтобы слова не переносились */
+}
+
+.header__soc {
+    display: flex;
+    gap: 15px;
+    margin-left: 30px; /* Отступ от меню до соцсетей */
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+}
+
+/* --------- */
+
+/* Эффект при наведении (hover) */
+.header__nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.header__nav-link:hover {
+    color: #FFBC00; /* Цвет при наведении */
+}
+
+/* Подчеркивание при наведении */
+.header__nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Расстояние от текста до линии */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFBC00;
+    transition: width 0.3s ease;
+}
+
+.header__nav-link:hover::after {
+    width: 100%;
+}
+
+/* Активное состояние (если ссылка выбрана) */
+.header__nav-link.active {
+    color: #FFBC00;
+}
+
+.header__nav-link.active::after {
+    width: 100%;
+}

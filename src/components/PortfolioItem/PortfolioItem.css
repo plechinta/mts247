@@ -1,0 +1,61 @@
+/* Главный контейнер карточки */
+.portfolio__block {
+    position: relative; /* Самое важное! Текст и оверлей будут позиционироваться относительно этого блока */
+    width: 100%;
+    height: 360px; /* Высота, которая была у тебя изначально */
+    border-radius: 24px; /* Скругление углов как в макете */
+    overflow: hidden; /* Обрезает все, что вылезает за скругленные углы (картинку) */
+    cursor: pointer;
+}
+
+/* Сама картинка */
+.portfolio__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполняет блок целиком без искажений */
+    display: block;
+    
+    /* Делаем черно-белым через CSS-фильтр */
+    filter: grayscale(100%);
+    transition: filter 0.3s ease; /* Плавность возвращения цвета */
+}
+
+/* При наведении на карточку картинка становится цветной */
+.portfolio__block:hover .portfolio__img {
+    filter: grayscale(0%);
+}
+
+/* Слой затемнения */
+.portfolio__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Полупрозрачный черный. Можешь сделать темнее, поменяв 0.4 на 0.6 */
+    z-index: 1; /* Кладем этот слой поверх картинки */
+}
+
+/* Контейнер с текстом */
+.portfolio__txt-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Центрируем текст по вертикали и горизонтали */
+    z-index: 2; /* Кладем текст поверх слоя затемнения */
+}
+
+/* Сам текст */
+.portfolio__txt {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    padding: 0 15px; /* Безопасные отступы по краям, чтобы текст не прилипал к границам на узких экранах */
+}

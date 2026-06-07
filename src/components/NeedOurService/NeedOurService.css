@@ -1,0 +1,65 @@
+.block-nd { 
+    background-color: #FFBC00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 40px 24px;
+}
+
+.num_text { 
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+}
+.block__ni { 
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.block__number {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.wrapper__txt { 
+    white-space: nowrap;
+}
+/* .wrapper__bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+} */
+
+/* как правильно сдеолать кнопку есть два способа */
+
+.wrapper__bt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.block__icon {
+    border-radius: 12px;
+}
+
+.need__service-line {
+    border: 1.5px solid #000000;
+    width: 100%;
+}
+.block-nd-title__wrap {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    gap: 4px;
+}
