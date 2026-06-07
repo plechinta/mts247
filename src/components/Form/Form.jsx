@@ -34,10 +34,9 @@ function Form({title}) {
     return( 
 
         <div className="form">
-            <div className="container">
-                <div className="row">
-                    <div className="form-wrapper d-flex flex-column flex-xxl-row justify-content-xxl-space-between ">
-                        <div className="col">
+            <div className="custom__container">
+                    <div className="form-wrapper d-flex flex-column flex-xxl-row justify-content-xxl-space-between">
+                        <div>
                             <div className="form-left__block">
                                 <button className="btn__form-sm gs-btn__sm">Contact</button>
                                 <span className="form-title_text gs-text__h2 d-block"> We’d love <span style={{color: "#FFBC00"}}>you to help</span></span>
@@ -50,8 +49,8 @@ function Form({title}) {
                             </div>
                         </div>
 
-                        <div className="col">
-                            <form className="contact-form" action="#" method="post"> 
+                        <div>
+                            <form className="contact-form" action="#" method="post">
     
                                 <fieldset className="form-contact__block">
     
@@ -89,10 +88,6 @@ function Form({title}) {
                             </form>
                         </div>
                     </div>
-
-                </div>
-                
-                
             </div>
         </div>
     )

@@ -6,10 +6,6 @@
     margin-bottom: 8px;
 }
 
-/* .our-service__text {
-    margin-bottom: 38px;
-} */
-
 .service__pagination-lg, .service__pagination-sm {
     display: flex;
     align-items: center;
@@ -17,36 +13,44 @@
     flex-direction: row;
     gap: 10px;
     max-height: 51px;
-
 }
 
 .our-service-slide {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(3,272px);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 272px);
     gap: 24px;
 }
-/* .service__pagination-lg:hover, .service__pagination-sm:hover {
-    
-} */
+
+@media (max-width: 1200px) {
+    .our-service-slide {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+    }
+}
+
+@media (max-width: 768px) {
+    .our-service-slide {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
 
 .service__pagination-sm.is-active{
-    background: #FFBC00; /* или как у тебя */
+    background: #FFBC00;
     color: #000;
 }
+
 .service__pagination-lg {
     font-family: "Arial", sans-serif;
     font-weight: 700;
     font-size: 20px;
     line-height: 23px;
     color: #000;
-    
     background: #ffbc00;
     border: 1px solid #79530b;
     border-radius: 10px;
-
-    padding: 16px 14px ;
-
+    padding: 16px 14px;
 }
 
 .service__pagination-sm {
@@ -55,25 +59,25 @@
     font-size: 20px;
     color: #000;
     line-height: 23px;
-    
     background: #ffbc00;
     border: 1px solid #79530b;
     border-radius: 10px;
     padding: 17px 20px;
-
 }
 
 .service__pagination-block {
-    /* Нижний отступ задан тут  */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
     gap: 16px;
-    /* margin-top: 40px; */
-    /* margin-bottom: 88px; */  
 }
 
+.service__pagination-sm.is-active {
+    border-color: #79530b;  
+    background-color: #1C150A;
+    color: #FFBC00;
+}
 
 .tires-box {
     border: 1px solid rgba(255, 255, 255, 0.33);
@@ -83,12 +87,12 @@
     position: relative;
 }
 
-
-.service__pagination-sm.is-active {
-    border-color: #79530b;  
-    background-color: #1C150A; /* Темный фон для активной страницы */
-    color: #FFBC00;         /* Желтый цвет цифры */
-}
 .services-wrapper .splide {
     padding: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+.services-wrapper .splide__track {
+    overflow: hidden;
 }
