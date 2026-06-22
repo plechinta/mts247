@@ -53,7 +53,7 @@ function OurService({ title }) {
                                     quickly and conveniently. No visits to the service center!
                                 </p>
                             </div>
-                            <button className="our-service__bt gs-btn__sr gs-text__h5">Contact Us</button>
+                            <a href="/contact"><button className="our-service__bt gs-btn__sr gs-text__h5">Contact Us</button></a>
                         </div>
                     </div>
 

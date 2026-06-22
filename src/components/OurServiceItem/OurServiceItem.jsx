@@ -11,7 +11,7 @@ function OurServiceItem(props) {
             </svg>
             <p className="gs-text__h4">{props.title}</p>
             <p className="gs-text">{props.description}</p>
-            <a className="service__link d-flex align-items-center" href="#">
+            <a className="service__link d-flex align-items-center" href="/service">
                 <div className="me-2">GO TO SERVICE</div>
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" clipRule="evenodd" d="M14 0.583333C14 0.261167 13.7388 0 13.4167 0H6.41667C6.0945 0 5.83333 0.261167 5.83333 0.583333C5.83333 0.905499 6.0945 1.16667 6.41667 1.16667H12.0084L0.170854 13.0042C-0.0569512 13.232 -0.0569512 13.6013 0.170854 13.8291C0.398661 14.057 0.768006 14.057 0.995813 13.8291L12.8333 1.99162V7.58333C12.8333 7.9055 13.0945 8.16667 13.4167 8.16667C13.7388 8.16667 14 7.9055 14 7.58333V0.583333Z" />
