@@ -132,6 +132,9 @@ export default {
     messageLabel: 'Message :',
     messagePlaceholder: 'Tapez votre message',
     sendBtn: 'ENVOYER',
+    waMessage: "Bonjour, j'ai besoin d'aide.\n\nMa localisation:\n",
+    geoNotSupported: 'La géolocalisation n\'est pas prise en charge',
+    geoError: 'Impossible d\'obtenir votre localisation',
   },
   footer: {
     siteMap: 'Plan du site',

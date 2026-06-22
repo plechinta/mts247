@@ -132,6 +132,9 @@ export default {
     messageLabel: 'Bericht:',
     messagePlaceholder: 'Typ je bericht',
     sendBtn: 'VERSTUUR',
+    waMessage: 'Hallo, ik heb hulp nodig.\n\nMijn locatie:\n',
+    geoNotSupported: 'Geolocatie wordt niet ondersteund',
+    geoError: 'Kan je locatie niet bepalen',
   },
   footer: {
     siteMap: 'Sitemap',

@@ -8,7 +8,7 @@ function Form() {
 
     const handleFindMe = () => {
         if (!navigator.geolocation) {
-            alert("Geolocation is not supported");
+            alert(t('form.geoNotSupported'));
             return;
         }
 
@@ -20,7 +20,7 @@ function Form() {
                 const mapUrl = `https://maps.google.com/?q=${lat},${lng}`;
 
                 const message = encodeURIComponent(
-                    `Hello, I need assistance.\n\nMy location:\n${mapUrl}`
+                    t('form.waMessage') + mapUrl
                 );
 
                 window.open(
@@ -30,7 +30,7 @@ function Form() {
             },
             (error) => {
                 console.error(error);
-                alert("Unable to get your location");
+                alert(t('form.geoError'));
             }
         );
     };
@@ -38,8 +38,8 @@ function Form() {
     return (
         <div className="form">
             <div className="custom__container">
-                <div className="form-wrapper d-flex flex-column flex-xxl-row justify-content-xxl-space-between">
-                    <div>
+                <div className="form-wrapper d-flex flex-column flex-xxl-row">
+                    <div className="form-col-left">
                         <div className="form-left__block">
                             <button className="btn__form-sm gs-btn__sm">{t('form.badge')}</button>
                             <span className="form-title_text gs-text__h2 d-block">
@@ -54,7 +54,7 @@ function Form() {
                         </div>
                     </div>
 
-                    <div>
+                    <div className="form-col-right">
                         <form className="contact-form" action="#" method="post">
                             <fieldset className="form-contact__block">
                                 <div className="form-fields__list">

@@ -132,6 +132,9 @@ export default {
     messageLabel: 'Message:',
     messagePlaceholder: 'Type your message',
     sendBtn: 'SEND us',
+    waMessage: 'Hello, I need assistance.\n\nMy location:\n',
+    geoNotSupported: 'Geolocation is not supported',
+    geoError: 'Unable to get your location',
   },
   footer: {
     siteMap: 'Site Map',

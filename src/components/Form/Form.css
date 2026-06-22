@@ -5,6 +5,24 @@
     border-radius: 24px;
 }
 
+.form-col-left {
+    flex-shrink: 0;
+}
+
+.form-col-right {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (min-width: 1400px) {
+    .form-col-left {
+        width: 45%;
+    }
+    .form-col-right {
+        width: 55%;
+    }
+}
+
 .form-left__block {
     height: 100%;
     padding: 79px 49px 79px 49px;
