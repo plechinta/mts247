@@ -9,12 +9,14 @@ import arrow from "../../assets/Icons/arrow.svg"
 import loc_contact from "../../assets/Icons/loc_contact.svg"
 import let_contact from "../../assets/Icons/letter_contact.svg"
 import pho_contact from "../../assets/Icons/phone_contact.svg"
+import { useLang } from "../../context/LangContext.jsx"
 
 function Footer() {
+    const { t } = useLang()
 
     useEffect(() => {
         const btn = document.getElementById("scrollToTopBtn");
-        
+
         const scrollToTop = () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         };
@@ -30,33 +32,32 @@ function Footer() {
         };
     }, []);
 
-    // 1. Изменили структуру массива. Теперь у каждой ссылки есть точный путь (path)
     const footerNav = [
-        { 
-            title: "Site Map", 
+        {
+            title: t('footer.siteMap'),
             links: [
-                { name: 'Home', path: '/' },
-                { name: 'Service', path: '/service' },
-                { name: 'About Us', path: '/aboutus' },
-                { name: 'Contact Us', path: '/contact' }
-            ] 
+                { name: t('footer.links.home'), path: '/' },
+                { name: t('footer.links.service'), path: '/service' },
+                { name: t('footer.links.aboutUs'), path: '/aboutus' },
+                { name: t('footer.links.contactUs'), path: '/contact' },
+            ]
         },
-        { 
-            title: "Services", 
+        {
+            title: t('footer.services'),
             links: [
-                { name: 'Tire installation', path: '/service' },
-                { name: 'Buy Tires From us', path: '/service' },
-                { name: 'Help with a Flat battery', path: '/service' },
-                { name: 'Diagnostic for cars', path: '/service' },
-                { name: 'Tire repair', path: '/service' }
-            ] 
+                { name: t('footer.serviceLinks.installation'), path: '/service' },
+                { name: t('footer.serviceLinks.buyTires'), path: '/service' },
+                { name: t('footer.serviceLinks.flatBattery'), path: '/service' },
+                { name: t('footer.serviceLinks.diagnostics'), path: '/service' },
+                { name: t('footer.serviceLinks.repair'), path: '/service' },
+            ]
         },
     ]
 
     const contacts = [
-        { pic: loc_contact, title: 'Address', desc: 'Belgium' },
-        { pic: let_contact, title: 'E-mail', desc: 'loremipsum@gmai.com' },
-        { pic: pho_contact, title: 'Telephone number', desc: '+31657200120' }
+        { pic: loc_contact, title: t('footer.address'), desc: 'Belgium' },
+        { pic: let_contact, title: t('footer.email'), desc: 'loremipsum@gmai.com' },
+        { pic: pho_contact, title: t('footer.phone'), desc: '+31657200120' },
     ]
 
     return (
@@ -64,7 +65,6 @@ function Footer() {
             <footer className="footer">
                 <div className="custom__container">
                     <div className="row">
-
                         <div className="footer__wrapper flex-column flex-lg-row">
                             <div className="col-12 col-sm order-1">
                                 <div className="footer-block__lft">
@@ -77,7 +77,7 @@ function Footer() {
                                     </div>
                                     <button className="gs-btn__bs" id="scrollToTopBtn" type="button">
                                         <img src={arrow} className="footer-icon" alt="" />
-                                        Back to the top
+                                        {t('footer.backToTop')}
                                     </button>
                                 </div>
                             </div>
@@ -88,7 +88,6 @@ function Footer() {
                                         <div key={index}>
                                             <p className="footer-ff1">{category.title}</p>
                                             <div className="footer-services__table">
-                                                {/* 2. Используем link.path для атрибута href и link.name для текста */}
                                                 {category.links.map((link, linksIndex) => (
                                                     <a href={link.path} className="footer-ff2" key={linksIndex}>
                                                         {link.name}
@@ -102,7 +101,7 @@ function Footer() {
 
                             <div className="col-12 col-sm order-2 order-md-3">
                                 <div className="footer-contact__block">
-                                    <p className="footer-ff1">Contact</p>
+                                    <p className="footer-ff1">{t('footer.contact')}</p>
                                     {contacts.map((item, index) => (
                                         <div className="footer-contact__icon" key={index}>
                                             <img src={item.pic} className="footer-contact__img" alt={item.title} />
@@ -115,7 +114,6 @@ function Footer() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </footer>

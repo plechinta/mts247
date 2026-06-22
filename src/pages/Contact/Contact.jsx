@@ -5,41 +5,43 @@ import Footer from "../../components/Footer/Footer.jsx"
 import ContactInfoList from "../../components/ContactInfoList/ContactInfoList.jsx"
 import Copyright from "../../components/Copyright/Copyright.jsx"
 import background from "../../assets/Image/background/contact_bc.jpg"
+import { useLang } from "../../context/LangContext.jsx"
 
-function Contact({ }) {
+function Contact() {
+    const { t } = useLang()
+    const hero = t('hero.contact')
+
     const page = {
-                key: "block__main-content-center",
-                status: "HOME / CONTACT",
-                titleWhite:"all across Belgium — ",
-                titleYellow:" always ready to help",
-                desc:"From Antwerp and Brussels to Ghent, Leuven, Liège and beyond — our mobile tire team is available 24/7 anywhere you need us.",
-                pic: background,
-                }
+        key: "block__main-content-center",
+        ...hero,
+        pic: background,
+    }
+
     return (
         <>
-        <section>
-            <Header />
-        </section>
+            <section>
+                <Header />
+            </section>
 
-        <section>
-            <Main page={page}/>
-        </section>
+            <section>
+                <Main page={page} />
+            </section>
 
-        <section className="gs-section">
-            <ContactInfoList />
-        </section>
+            <section className="gs-section">
+                <ContactInfoList />
+            </section>
 
-        <section className="gs-section">
-            <Form />
-        </section>
+            <section className="gs-section">
+                <Form />
+            </section>
 
-        <section className="gs-section">
-            <Footer />
-        </section>
+            <section className="gs-section">
+                <Footer />
+            </section>
 
-        <section >
-                <Copyright/>
-        </section>
+            <section>
+                <Copyright />
+            </section>
         </>
     );
 }

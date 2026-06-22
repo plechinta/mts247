@@ -2,13 +2,14 @@ import { useState } from "react"
 import "./BgMenu.css"
 import logo from "../../assets/Image/logo.svg"
 import SelectLang from "../SelectLang/SelectLang.jsx"
+import { useLang } from "../../context/LangContext.jsx"
 
 function BgMenu({ func }) {
     const [isClosing, setIsClosing] = useState(false)
+    const { t } = useLang()
 
     const handleClose = () => {
         setIsClosing(true)
-        // Ждём окончания анимации (0.35s) — потом размонтируем
         setTimeout(() => func(false), 350)
     }
 
@@ -70,30 +71,26 @@ function BgMenu({ func }) {
                         <ul className="bgmenu__nav-list">
                             <li>
                                 <a className="bgmenu__nav-link bgmenu__nav-link--active" href="/">
-                                    <span>
-                                        Home                                        
-                                    </span>
+                                    <span>{t('nav.home')}</span>
                                 </a>
                             </li>
                             <hr className="bgmenu__nav-hr" />
                             <li>
                                 <a className="bgmenu__nav-link bgmenu__nav-select" href="/service">
-                                    <span>Services</span>
+                                    <span>{t('nav.services')}</span>
                                 </a>
                             </li>
                             <hr className="bgmenu__nav-hr" />
                             <hr className="bgmenu__nav-hr" />
                             <li>
                                 <a className="bgmenu__nav-link" href="/aboutus">
-                                <span>About Us</span>
+                                    <span>{t('nav.aboutUs')}</span>
                                 </a>
                             </li>
                             <hr className="bgmenu__nav-hr" />
                             <li>
                                 <a className="bgmenu__nav-link" href="/contact">
-                                    <span>
-                                        Contact
-                                    </span>
+                                    <span>{t('nav.contact')}</span>
                                 </a>
                             </li>
                             <hr className="bgmenu__nav-hr" />
@@ -106,7 +103,7 @@ function BgMenu({ func }) {
 
                 {/* Контактная информация */}
                 <div className="bgmenu__contact-section">
-                    <span className="bgmenu__title">Contact</span>
+                    <span className="bgmenu__title">{t('nav.contact')}</span>
 
                     <div className="bgmenu__text-block">
                         <div className="bgmenu__icon">
@@ -115,7 +112,7 @@ function BgMenu({ func }) {
                             </svg>
                         </div>
                         <div className="bgmernu__contact-info">
-                            <p className="bgmenu__subtitle">E-mail</p>
+                            <p className="bgmenu__subtitle">{t('contactInfo.email')}</p>
                             <p className="bgmenu__text">loremipsum@gmai.com</p>
                         </div>
                     </div>
@@ -127,7 +124,7 @@ function BgMenu({ func }) {
                             </svg>
                         </div>
                         <div className="bgmenu__contact-info">
-                            <p className="bgmenu__subtitle">Telephone number</p>
+                            <p className="bgmenu__subtitle">{t('contactInfo.phone')}</p>
                             <p className="bgmenu__text">+32479080218</p>
                         </div>
                     </div>
@@ -158,13 +155,13 @@ function BgMenu({ func }) {
                         <svg width="16" height="20" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8.25 22C8.25 22 16.5 14.1813 16.5 8.25C16.5 3.69365 12.8063 0 8.25 0C3.69365 0 0 3.69365 0 8.25C0 14.1813 8.25 22 8.25 22ZM8.25 12.375C5.97183 12.375 4.125 10.5282 4.125 8.25C4.125 5.97183 5.97183 4.125 8.25 4.125C10.5282 4.125 12.375 5.97183 12.375 8.25C12.375 10.5282 10.5282 12.375 8.25 12.375Z" fill="black" />
                         </svg>
-                        Locate me
+                        {t('buttons.locateMe')}
                     </button>
                     <a className="bgmenu__btn-wp" href="https://wa.me/+32479080218" target="_blank" rel="noopener noreferrer">
                         <svg width="18" height="18" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.0113 2.83535C14.2527 1.00535 11.9078 0 9.4108 0C4.26909 0 0.0805489 4.33642 0.076074 9.65966C0.076074 11.3646 0.505668 13.0232 1.32011 14.4918L0 19.5L4.94928 18.1565C6.31414 18.9255 7.84905 19.3332 9.4108 19.3332H9.41527C14.557 19.3332 18.7455 14.9968 18.75 9.66892C18.7455 7.08838 17.7745 4.66073 16.0113 2.83535ZM9.4108 17.6978C8.01462 17.6978 6.64976 17.3086 5.45943 16.5766L5.17751 16.4006L2.24195 17.1974L3.02506 14.2324L2.84159 13.9266C2.06295 12.6479 1.65573 11.17 1.65573 9.65503C1.65573 5.23521 5.13723 1.63079 9.41527 1.63079C11.4872 1.63079 13.4338 2.46935 14.9016 3.98432C16.3649 5.50392 17.1703 7.51925 17.1703 9.66429C17.1659 14.098 13.6844 17.6978 9.4108 17.6978ZM13.6665 11.6842C13.4338 11.5638 12.2882 10.98 12.0734 10.8967C11.8586 10.8179 11.702 10.7762 11.5498 11.0171C11.3932 11.258 10.9457 11.8047 10.8115 11.9622C10.6772 12.1244 10.5385 12.1429 10.3058 12.0225C10.0731 11.902 9.3213 11.6472 8.43079 10.8225C7.73717 10.1832 7.27178 9.39095 7.13305 9.15004C6.99881 8.90912 7.11963 8.7794 7.23598 8.65895C7.3389 8.55239 7.46868 8.37634 7.58502 8.23735C7.70137 8.09836 7.74165 7.99644 7.81772 7.83428C7.89379 7.67213 7.858 7.53314 7.79982 7.41269C7.74165 7.29223 7.27625 6.10157 7.07936 5.61974C6.89141 5.14719 6.69899 5.21205 6.55579 5.20741C6.42154 5.19815 6.26492 5.19815 6.10829 5.19815C5.95167 5.19815 5.70107 5.25837 5.48628 5.49929C5.27148 5.7402 4.67184 6.32395 4.67184 7.51461C4.67184 8.70527 5.50865 9.84961 5.625 10.0118C5.74135 10.1739 7.2673 12.6108 9.6077 13.6579C10.1626 13.9081 10.5967 14.0563 10.9368 14.1675C11.4961 14.3528 12.0018 14.325 12.4045 14.2648C12.852 14.1953 13.7828 13.681 13.9797 13.1158C14.1721 12.5506 14.1721 12.0688 14.114 11.9669C14.0558 11.8649 13.8992 11.8047 13.6665 11.6842Z" fill="white" />
                         </svg>
-                        WhatsApp
+                        {t('buttons.whatsapp')}
                     </a>
                 </div>
 

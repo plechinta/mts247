@@ -4,12 +4,14 @@ import insta from "../../assets/Icons/inst.svg"
 import telegram from "../../assets/Icons/telegram.svg"
 import whatsapp from "../../assets/Icons/whatsapp.svg"
 import location from "../../assets/Icons/geo-bt.svg"
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import BgMenu from "../BgMenu/BgMenu.jsx"
 import SelectLang from "../SelectLang/SelectLang.jsx"
+import { useLang } from "../../context/LangContext.jsx"
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { t } = useLang()
 
     const handleFindMe = () => {
         if (!navigator.geolocation) {
@@ -54,17 +56,16 @@ function Header() {
                     <div className="col-6 col-xxl-7 d-flex justify-content-end justify-content-xxl-center align-items-center">
                         {/* Бургер для мобилок */}
                         <button className="nav-btn d-xxl-none" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                            {/* Твой SVG бургера */}
                             <svg width="40" height="40" viewBox="0 0 44 44" fill="none"><rect width="44" height="44" rx="9" fill="#FFBC00" /><path d="M11 32H33V28.6667H11V32ZM11 23.6667H33V20.3333H11V23.6667ZM11 12V15.3333H33V12H11Z" fill="black" /></svg>
                         </button>
 
                         {/* Навигация */}
                         <nav className="d-none d-xxl-flex align-items-center">
                             <ul className="header__nav-list">
-                                <li><a className="header__nav-link" href="/">home</a></li>
-                                <li><a className="header__nav-link" href="/service">services</a></li>
-                                <li><a className="header__nav-link" href="/aboutus">about us</a></li>
-                                <li><a className="header__nav-link" href="/contact">contact</a></li>
+                                <li><a className="header__nav-link" href="/">{t('nav.home')}</a></li>
+                                <li><a className="header__nav-link" href="/service">{t('nav.services')}</a></li>
+                                <li><a className="header__nav-link" href="/aboutus">{t('nav.aboutUs')}</a></li>
+                                <li><a className="header__nav-link" href="/contact">{t('nav.contact')}</a></li>
                             </ul>
                             <div className="header__soc">
                                 <a href="https://www.instagram.com/" target="_blank"><img src={insta} alt="Inst" /></a>
@@ -77,8 +78,8 @@ function Header() {
                     {/* ПРАВАЯ ЧАСТЬ */}
                     <div className="col-3 d-none d-xxl-flex justify-content-end align-items-center">
                         <SelectLang />
-                        <button className="gs-btn gs-btn__sy ms-3"  onClick={handleFindMe}>
-                            <img src={location} alt="" />Locate Me
+                        <button className="gs-btn gs-btn__sy ms-3" onClick={handleFindMe}>
+                            <img src={location} alt="" />{t('nav.locateMe')}
                         </button>
                     </div>
                 </div>

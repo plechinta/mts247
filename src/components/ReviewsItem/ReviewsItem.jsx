@@ -1,35 +1,30 @@
 import "./ReviewsItem.css"
 
+function ReviewsItem({ reviewText }) {
+    const starFull = (
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.1816 0L15.0572 8.98278H24.3632L16.8345 14.5344L19.7102 23.5172L12.1816 17.9656L4.6529 23.5172L7.52859 14.5344L-6.00815e-05 8.98278H9.30587L12.1816 0Z" fill="#FFBC00" />
+        </svg>
+    )
+    const starHalf = (
+        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.8193 9.05859L14.875 9.23242H23.6035L16.6865 14.333L16.542 14.4395L16.5967 14.6104L19.2354 22.8574L12.3301 17.7646L12.1816 17.6553L12.0332 17.7646L5.12598 22.8574L7.7666 14.6104L7.82129 14.4395L7.67676 14.333L0.759766 9.23242H9.48828L9.54395 9.05859L12.1816 0.820312L14.8193 9.05859Z" fill="url(#paint0_linear_261_923)" stroke="#FFBC00" strokeWidth="0.5" />
+            <defs>
+                <linearGradient id="paint0_linear_261_923" x1="3.19257" y1="15.1447" x2="12.373" y2="15.1447" gradientUnits="userSpaceOnUse">
+                    <stop offset="0.9998" stopColor="#FFBC00" />
+                    <stop offset="0.9999" stopOpacity="0" />
+                    <stop offset="1" />
+                </linearGradient>
+            </defs>
+        </svg>
+    )
 
-function ReviewsItem({ title }) {
     return (
-
         <div className="review__comment-wrapper d-flex flex-column">
             <div className="review__star-icon d-none d-md-flex">
-                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.1816 0L15.0572 8.98278H24.3632L16.8345 14.5344L19.7102 23.5172L12.1816 17.9656L4.6529 23.5172L7.52859 14.5344L-6.00815e-05 8.98278H9.30587L12.1816 0Z" fill="#FFBC00" />
-                </svg>
-                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.1816 0L15.0572 8.98278H24.3632L16.8345 14.5344L19.7102 23.5172L12.1816 17.9656L4.6529 23.5172L7.52859 14.5344L-6.00815e-05 8.98278H9.30587L12.1816 0Z" fill="#FFBC00" />
-                </svg>
-                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.1816 0L15.0572 8.98278H24.3632L16.8345 14.5344L19.7102 23.5172L12.1816 17.9656L4.6529 23.5172L7.52859 14.5344L-6.00815e-05 8.98278H9.30587L12.1816 0Z" fill="#FFBC00" />
-                </svg>
-                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12.1816 0L15.0572 8.98278H24.3632L16.8345 14.5344L19.7102 23.5172L12.1816 17.9656L4.6529 23.5172L7.52859 14.5344L-6.00815e-05 8.98278H9.30587L12.1816 0Z" fill="#FFBC00" />
-                </svg>
-                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M14.8193 9.05859L14.875 9.23242H23.6035L16.6865 14.333L16.542 14.4395L16.5967 14.6104L19.2354 22.8574L12.3301 17.7646L12.1816 17.6553L12.0332 17.7646L5.12598 22.8574L7.7666 14.6104L7.82129 14.4395L7.67676 14.333L0.759766 9.23242H9.48828L9.54395 9.05859L12.1816 0.820312L14.8193 9.05859Z" fill="url(#paint0_linear_261_923)" stroke="#FFBC00" strokeWidth="0.5" />
-                    <defs>
-                        <linearGradient id="paint0_linear_261_923" x1="3.19257" y1="15.1447" x2="12.373" y2="15.1447" gradientUnits="userSpaceOnUse">
-                            <stop offset="0.9998" stopColor="#FFBC00" />
-                            <stop offset="0.9999" stopOpacity="0" />
-                            <stop offset="1" />
-                        </linearGradient>
-                    </defs>
-                </svg>
+                {starFull}{starFull}{starFull}{starFull}{starHalf}
             </div>
-            <span className="review__desc gs-text order-2">Fast and professional! Got a flat near Antwerp, they arrived in 40 minutes and fixed it.</span>
+            <span className="review__desc gs-text order-2">{reviewText}</span>
             <hr className="review__line d-none d-md-flex order-3" />
             <div className="review__client-wrapper order-1 order-md-4 mb-3 mb-md-0">
                 <svg width="54" height="53" viewBox="0 0 54 53" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
@@ -41,31 +36,10 @@ function ReviewsItem({ title }) {
                         </pattern>
                     </defs>
                 </svg>
-                <div className="review__client-info ">
+                <div className="review__client-info">
                     <p>Thomas V.</p>
                     <div className="review__star-icon d-md-none">
-                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.1816 0L15.0572 8.98278H24.3632L16.8345 14.5344L19.7102 23.5172L12.1816 17.9656L4.6529 23.5172L7.52859 14.5344L-6.00815e-05 8.98278H9.30587L12.1816 0Z" fill="#FFBC00" />
-                        </svg>
-                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.1816 0L15.0572 8.98278H24.3632L16.8345 14.5344L19.7102 23.5172L12.1816 17.9656L4.6529 23.5172L7.52859 14.5344L-6.00815e-05 8.98278H9.30587L12.1816 0Z" fill="#FFBC00" />
-                        </svg>
-                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.1816 0L15.0572 8.98278H24.3632L16.8345 14.5344L19.7102 23.5172L12.1816 17.9656L4.6529 23.5172L7.52859 14.5344L-6.00815e-05 8.98278H9.30587L12.1816 0Z" fill="#FFBC00" />
-                        </svg>
-                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.1816 0L15.0572 8.98278H24.3632L16.8345 14.5344L19.7102 23.5172L12.1816 17.9656L4.6529 23.5172L7.52859 14.5344L-6.00815e-05 8.98278H9.30587L12.1816 0Z" fill="#FFBC00" />
-                        </svg>
-                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M14.8193 9.05859L14.875 9.23242H23.6035L16.6865 14.333L16.542 14.4395L16.5967 14.6104L19.2354 22.8574L12.3301 17.7646L12.1816 17.6553L12.0332 17.7646L5.12598 22.8574L7.7666 14.6104L7.82129 14.4395L7.67676 14.333L0.759766 9.23242H9.48828L9.54395 9.05859L12.1816 0.820312L14.8193 9.05859Z" fill="url(#paint0_linear_261_923)" stroke="#FFBC00" strokeWidth="0.5" />
-                            <defs>
-                                <linearGradient id="paint0_linear_261_923" x1="3.19257" y1="15.1447" x2="12.373" y2="15.1447" gradientUnits="userSpaceOnUse">
-                                    <stop offset="0.9998" stopColor="#FFBC00" />
-                                    <stop offset="0.9999" stopOpacity="0" />
-                                    <stop offset="1" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
+                        {starFull}{starFull}{starFull}{starFull}{starHalf}
                     </div>
                     <div className="review__client-location d-none d-md-flex">
                         <svg width="10" height="15" viewBox="0 0 10 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,4 +53,4 @@ function ReviewsItem({ title }) {
     )
 }
 
-export default ReviewsItem; 
+export default ReviewsItem;

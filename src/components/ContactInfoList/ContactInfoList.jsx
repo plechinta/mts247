@@ -1,7 +1,9 @@
 import "./ContactInfoList.css"
+import { useLang } from "../../context/LangContext.jsx"
 
+function ContactInfoList() {
+    const { t } = useLang()
 
-function ContactInfoList({ }) {
     return (
         <div className="contactinfo__wrapper">
             <div className="container">
@@ -14,7 +16,7 @@ function ContactInfoList({ }) {
                                 </svg>
                             </div>
                             <div className="contactinfo__text">
-                                <p className="contactinfo__text-sm">Telephone</p>
+                                <p className="contactinfo__text-sm">{t('contactInfo.phone')}</p>
                                 <p className="contactinfo__text-md">+32 474 03 62 72</p>
                             </div>
                         </div>
@@ -27,7 +29,7 @@ function ContactInfoList({ }) {
                                 </svg>
                             </div>
                             <div className="contactinfo__text">
-                                <p className="contactinfo__text-sm">E-mail</p>
+                                <p className="contactinfo__text-sm">{t('contactInfo.email')}</p>
                                 <p className="contactinfo__text-md">loremipsum@gmai.com</p>
                             </div>
                         </div>
@@ -40,7 +42,7 @@ function ContactInfoList({ }) {
                                 </svg>
                             </div>
                             <div className="contactinfo__text">
-                                <p className="contactinfo__text-sm">Location</p>
+                                <p className="contactinfo__text-sm">{t('contactInfo.location')}</p>
                                 <p className="contactinfo__text-md">Belgium</p>
                             </div>
                         </div>

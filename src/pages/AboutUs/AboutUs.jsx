@@ -8,24 +8,26 @@ import Footer from "../../components/Footer/Footer.jsx"
 import NeedOurService from "../../components/NeedOurService/NeedOurService.jsx"
 import Copyright from "../../components/Copyright/Copyright.jsx"
 import background from "../../assets/Image/background/about_bc.jpg"
+import { useLang } from "../../context/LangContext.jsx"
 
-function AboutUs({}) {
+function AboutUs() {
+    const { t } = useLang()
+    const hero = t('hero.aboutUs')
+
     const page = {
-                key: "block__main-content-center",
-                status: "HOME / ABOUT US",
-                titleWhite:"MOBILE TIRE SERVICE",
-                titleYellow:" YOU CAN TRUST",
-                desc:"Professional team, modern equipment, and 24/7 assistance — always ready to keep you moving.",
-                pic: background,
-                }
-    return( 
+        key: "block__main-content-center",
+        ...hero,
+        pic: background,
+    }
+
+    return(
         <>
             <section>
                 <Header />
             </section>
 
             <section>
-                <Main page={page}/>
+                <Main page={page} />
             </section>
 
             <section>
@@ -38,8 +40,8 @@ function AboutUs({}) {
 
             <section className="gs-section">
                 <HowWeWork />
-            </section> 
-            
+            </section>
+
             <section className="gs-section">
                 <Reviews />
             </section>
@@ -52,11 +54,10 @@ function AboutUs({}) {
                 <Footer />
             </section>
 
-            <section >
-                <Copyright/>
+            <section>
+                <Copyright />
             </section>
         </>
-
     );
 }
 export default AboutUs;

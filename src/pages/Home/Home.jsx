@@ -8,34 +8,29 @@ import AboutUs from "../../components/AboutUs/AboutUs.jsx"
 import OurService from "../../components/OurService/OurService.jsx"
 import Reviews from "../../components/Reviews/Reviews.jsx"
 import Form from "../../components/Form/Form.jsx"
-import ServiceList from "../../components/ServiceList/ServiceList.jsx"
-import BuyTires from "../../components/BuyTires/BuyTires.jsx"
-import WhoAreWe from "../../components/WhoAreWe/WhoAreWe.jsx"
-import PortfolioList from "../../components/PortfolioList/PortfolioList.jsx"
-import BgMenu from "../../components/BgMenu/BgMenu.jsx"
 import background from "../../assets/Image/background/main_bc.jpg"
-
+import { useLang } from "../../context/LangContext.jsx"
 
 function Home() {
-const page = {
-                key: "",
-                status: "",
-                titleWhite:"TIRES CHANGED RIGHT ",
-                titleYellow:"WHERE YOU ARE",
-                desc:"Serving all of Belgium. Fast response, professional equipment, and friendly service.",
-                pic: background, 
-                }
+    const { t } = useLang()
+    const hero = t('hero.home')
+
+    const page = {
+        key: "",
+        ...hero,
+        pic: background,
+    }
 
     return (
         <>
             <section>
-                <Header title="Hello" />
+                <Header />
             </section>
 
             <section className="gs-section">
-                <Main  page={page}/>
+                <Main page={page} />
             </section>
-            
+
             <section>
                 <NeedOurService />
             </section>
@@ -59,7 +54,7 @@ const page = {
             <section className="gs-section">
                 <NeedOurService />
             </section>
-            
+
             <section className="gs-section">
                 <Form />
             </section>
@@ -68,11 +63,9 @@ const page = {
                 <Footer />
             </section>
 
-            <section >
+            <section>
                 <Copyright />
             </section>
-
-            {/* <section><BgMenu /></section> */}
         </>
     );
 }
