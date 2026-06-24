@@ -114,7 +114,6 @@ export default {
     desc: 'Wij zijn trots op de echte ervaringen van onze klanten die ons dagelijks vertrouwen op de wegen van België.',
     avgRating: '4.5',
     avgRatingLabel: 'Gemiddelde\nklantbeoordeling',
-    reviewText: 'Snel en professioneel! Lekke band bij Antwerpen, ze waren er binnen 40 minuten en repareerden alles.',
   },
   form: {
     badge: 'Contact',

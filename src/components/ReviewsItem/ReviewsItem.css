@@ -3,7 +3,8 @@
     border: 1px solid rgba(255, 255, 255, 0.33);
     border-radius: 24px;
     padding: 20px;
-    width: 341px
+    width: 341px;
+    height: 100%;
 }
 
 .review__star-icon {
@@ -26,14 +27,13 @@
 .review__client-wrapper{
     display: flex;
     justify-content: flex-start;
-
     flex-direction: row;
+    margin-top: auto;
 }
 .review__client-info{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-left: 17px;
 }
 .review__client-location { 
     display: flex;

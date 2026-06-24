@@ -5,6 +5,7 @@ import ReviewsItem from "../ReviewsItem/ReviewsItem.jsx";
 import star from "../../assets/Icons/Star5.svg"
 import { useRef } from 'react'
 import { useLang } from "../../context/LangContext.jsx"
+import reviews from "../../data/reviews.js"
 
 function Reviews() {
     const splideRef = useRef(null)
@@ -40,9 +41,14 @@ function Reviews() {
                         }
                     }
                 }}>
-                {Array.from({ length: 9 }).map((_, i) => (
+                {reviews.map((review, i) => (
                     <SplideSlide key={i}>
-                        <ReviewsItem reviewText={t('reviews.reviewText')} />
+                        <ReviewsItem
+                            reviewText={review.text}
+                            name={review.name}
+                            rating={review.rating}
+                            city={review.city}
+                        />
                     </SplideSlide>
                 ))}
             </Splide>

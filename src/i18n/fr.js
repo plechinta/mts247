@@ -114,7 +114,6 @@ export default {
     desc: 'Nous sommes fiers de partager les vraies expériences de nos clients qui nous font confiance chaque jour sur les routes de Belgique.',
     avgRating: '4.5',
     avgRatingLabel: 'Note moyenne\ndes clients',
-    reviewText: 'Rapide et professionnel ! Crevaison près d\'Anvers, ils sont arrivés en 40 minutes et ont tout réparé.',
   },
   form: {
     badge: 'Contact',

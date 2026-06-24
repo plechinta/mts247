@@ -114,7 +114,6 @@ export default {
     desc: "We're proud to share the real experiences of our customers who trust us every day on the roads of Belgium.",
     avgRating: '4.5',
     avgRatingLabel: 'Average\ncustomer rating',
-    reviewText: 'Fast and professional! Got a flat near Antwerp, they arrived in 40 minutes and fixed it.',
   },
   form: {
     badge: 'Contact',
